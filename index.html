@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Детский массаж | ZiyoMed</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="video-background">
+        <div class="video-overlay"></div>
+    </div>
+
+    <div class="container">
+        <h1>Детский массаж и терапия</h1>
+        
+        <div class="services-section">
+            <button id="toggleServices" class="service-toggle-btn">
+                Посмотреть список услуг ▼
+            </button>
+            
+            <div id="servicesList" class="services-list">
+                <label class="service-item">
+                    <input type="checkbox" name="service"> Точечный массаж
+                </label>
+                <label class="service-item">
+                    <input type="checkbox" name="service"> Общий массаж
+                </label>
+                <label class="service-item">
+                    <input type="checkbox" name="service"> Парафинотерапия
+                </label>
+                <label class="service-item">
+                    <input type="checkbox" name="service"> Электрофорез
+                </label>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <button id="showFormBtn" class="btn primary-btn" disabled>Оставить заявку</button>
+            <a href="tel:+998901234567" class="btn secondary-btn">Позвонить</a>
+        </div>
+
+        <form id="requestForm" class="request-form">
+            <input type="text" placeholder="Имя пациента" required>
+            <input type="number" placeholder="Возраст пациента" min="0" max="99" required>
+            
+            <div class="phone-input">
+                <span class="phone-prefix">+998</span>
+                <input 
+                    type="tel" 
+                    id="phone" 
+                    placeholder="00 000 00 00" 
+                    maxlength="12"
+                    required
+                >
+            </div>
+
+            <button type="submit" class="btn submit-btn">Отправить заявку</button>
+        </form>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
