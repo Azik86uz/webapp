@@ -1,33 +1,63 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <title>Запись на массаж | ZiyoMed</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
+    <title>Детский массаж | ZiyoMed</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Запись на массаж</h1>
+    <div class="video-background">
+        <div class="video-overlay"></div>
+    </div>
 
-    <form id="requestForm">
-      <input type="text" id="name" placeholder="Имя пациента" required />
-      <input type="number" id="age" placeholder="Возраст" min="0" required />
+    <div class="container">
+        <h1>Детский массаж и терапия</h1>
 
-      <div class="phone-input">
-        <span>+998</span>
-        <input type="tel" id="phone" placeholder="90 123 45 67" maxlength="12" required />
-      </div>
+        <div class="services-section">
+            <button id="toggleServices" class="service-toggle-btn">
+                Посмотреть список услуг ▼
+            </button>
 
-      <label><input type="checkbox" name="service" value="Общий массаж" /> Общий массаж</label><br />
-      <label><input type="checkbox" name="service" value="Точечный массаж" /> Точечный массаж</label><br />
-      <label><input type="checkbox" name="service" value="Парафинотерапия" /> Парафинотерапия</label><br />
-      <label><input type="checkbox" name="service" value="Электрофорез" /> Электрофорез</label><br />
+            <div id="servicesList" class="services-list">
+                <label class="service-item">
+                    <input type="checkbox" name="service"> Точечный массаж
+                </label>
+                <label class="service-item">
+                    <input type="checkbox" name="service"> Общий массаж
+                </label>
+                <label class="service-item">
+                    <input type="checkbox" name="service"> Парафинотерапия
+                </label>
+                <label class="service-item">
+                    <input type="checkbox" name="service"> Электрофорез
+                </label>
+            </div>
+        </div>
 
-      <button type="submit">Отправить заявку</button>
-    </form>
-  </div>
+        <div class="action-buttons">
+            <button id="showFormBtn" class="btn primary-btn" disabled>Оставить заявку</button>
+            <a href="tel:+998901234567" class="btn secondary-btn">Позвонить</a>
+        </div>
 
-  <script src="app.js"></script>
+        <form id="requestForm" class="request-form">
+            <input type="text" placeholder="Имя пациента" required>
+            <input type="number" placeholder="Возраст пациента" min="0" max="99" required>
+
+            <div class="phone-input">
+                <span class="phone-prefix">+998</span>
+                <input 
+                    type="tel" 
+                    id="phone" 
+                    placeholder="00 000 00 00" 
+                    maxlength="12"
+                    required
+                >
+            </div>
+
+            <button type="submit" class="btn submit-btn">Отправить заявку</button>
+        </form>
+    </div>
+
+    <script src="app.js"></script>
 </body>
 </html>
