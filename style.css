@@ -29,13 +29,14 @@ body {
 }
 
 .container {
-    background: white;
+    background: rgba(255, 255, 255, 0.85); /* полупрозрачный белый */
     border-radius: 15px;
     padding: 30px;
     width: 90%;
     max-width: 500px;
     margin: 30px auto;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    backdrop-filter: blur(5px); /* слегка размывает фон под контейнером */
 }
 
 h1 {
@@ -191,7 +192,8 @@ input[type="number"]::-webkit-inner-spin-button {
 @media (max-width: 480px) {
     .container {
         padding: 20px;
-        margin: 15px auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     .action-buttons {
