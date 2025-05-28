@@ -29,7 +29,7 @@ body {
 }
 
 .container {
-    background: rgba(255, 255, 255, 0.4); /* Прозрачность 40% */
+    background: rgba(255, 255, 255, 0.2); /* Прозрачность 20% */
     border-radius: 15px;
     padding: 30px;
     width: 90%;
