@@ -25,11 +25,11 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.05);
+    background: rgba(0,0,0,0.02);
 }
 
 .container {
-    background: rgba(255, 255, 255, 0.1); /* Прозрачность 10% */
+    background: rgba(255, 255, 255, 0.02); /* Прозрачность 10% */
     border-radius: 15px;
     padding: 30px;
     width: 90%;
